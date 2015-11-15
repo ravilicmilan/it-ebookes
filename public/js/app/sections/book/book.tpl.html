@@ -1,0 +1,22 @@
+<div class="row">
+	<h1>Book Details <a href="javascript:history.back()" class="btn btn-default pull-right">Go Back</a></h1>
+	<hr>
+	<div class="col-md-3">
+		<img ng-src="{{book.data.Image}}" alt="{{book.data.Title}}">
+	</div>
+
+	<div id="book-container" class="col-md-9">
+		<div id="book-title"><b>Title</b>: {{book.data.Title}}</div>
+		<div ng-show="book.data.SubTitle" id="book-sub-title"><b>Sub Title</b>: {{book.data.SubTitle}}</div>
+		<div id="book-description"><b>Description</b>: {{book.data.Description}}</div>
+		<div id="book-author"><b>Author</b>: {{book.data.Author}}</div>
+		<div id="book-isbn"><b>ISBN</b>: {{book.data.ISBN}}</div>
+		<div id="book-year"><b>Year</b>: {{book.data.Year}}</div>
+		<div id="book-pages"><b>Pages</b>: {{book.data.Page}}</div>
+		<div id="book-publisher"><b>Publisher</b>: {{book.data.Publisher}}</div>
+		<a class="btn btn-info" id="book-download" href="{{book.data.Download}}" target="_blank">
+			<span class="glyphicon glyphicon-download"></span> 
+			Download
+		</a>
+	</div>
+</div>

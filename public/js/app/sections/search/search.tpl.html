@@ -1,0 +1,59 @@
+<div class="row">
+	<h1>
+		Search Results   
+		<span ng-show="search.results.length > 0" class="label label-primary" id="search-total">
+			{{search.prevNum}} - {{search.nextNum}} from {{search.totalResults}}
+		</span> 
+		<a href="javascript:history.back()" class="btn btn-default pull-right">Go Back</a>
+	</h1>
+	<div class="clearfix"></div>
+	<hr>
+	
+	<div ng-show="search.results.length > 0">
+		<div id="search-container">
+			<div ng-repeat="book in search.results" class="book-container col-xs-12 col-sm-12 col-md-6 col-lg-6">
+				<div class="row">
+					<div class="left-side col-xs-12 col-sm-3 col-md-3 col-lg-3">
+						<img ng-src="{{book.Image}}" alt="{{book.Title}}" class="img-responsive img-rounded">
+					</div>
+
+					<div class="rigth-side col-xs-12 col-sm-9 col-md-9 col-lg-9">
+						<div class="title">{{book.Title}}</div>
+						<div class="description">{{book.Description}}</div>
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+				
+				<div class="row read-more-wrapper">
+					<a href="#/book/{{book.ID}}" class="btn btn-default read-more">Read More</a>
+				</div>
+				
+			</div>
+		</div>
+
+		<div class="clearfix"></div>
+		<hr>
+
+		<div class="pagination-container text-center">
+			<ul class="pager">
+			    <li ng-show="search.prevPage" class="previous">
+			    	<a ng-click="search.query(search.currentPage - 1);">
+			    		<span aria-hidden="true">&larr;</span> Previous
+			    	</a>
+			    </li>
+			    <li ng-show="search.nextPage" class="next">
+			    	<a ng-click="search.query(search.currentPage + 1);">
+			    		Next <span aria-hidden="true">&rarr;</span>
+			    	</a>
+			    </li>
+			</ul>
+		</div>
+	</div>
+
+	<div ng-show="search.results == undefined" class="col-md-12">
+		<div class="alert alert-danger" role="alert">
+			<p>There are no results with this search criteria.</p>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="jumbotron text-center">
+	<h1>Welcome to IT Ebooks Web App.</h1>
+	<h2>Search for ebooks below.</h2>
+	<br><br>
+	<div id="search-input" class="col-md-12">
+		<div class="input-group">
+	      	<input type="text" id="search_text" ng-model="home.searchText" class="form-control" placeholder="Search for... i.e javascript, html, css ...">
+	      	<span class="input-group-btn">
+	      	  	<button ng-click="home.query();" class="btn btn-primary" type="button">Search</button>
+	      	</span>
+	    </div>
+	</div>
+	<br><br>
+	<div class="searches">
+		<h4>Previous search phrases</h4>
+		<br>
+		<span ng-repeat="search in home.searches" class="label label-primary search-label">
+			<span ng-click="home.goTo(search)">{{search}}</span>; &nbsp;
+			<span ng-click="home.remove(search);" class="glyphicon glyphicon-remove"></span> 
+		</span> 
+	</div>
+</div>

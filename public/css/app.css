@@ -1,0 +1,107 @@
+body {
+	padding-top: 70px;
+}
+
+#search-container {
+	position: relative;
+	height: auto;
+	width: 100%;
+}
+.search-label {
+	font-size: 1em;
+	margin-right: 10px;
+}
+.search-label:hover {
+	color: #ccc;
+	cursor: pointer;
+}
+.search-label .glyphicon {
+	color: #fff;
+}
+.search-label .glyphicon:hover {
+	color: #cd0200;
+}
+.book-container {
+	position: relative;
+	min-height: 250px;
+	border: 1px solid #ddd;
+	border-radius: 5px;
+	margin: 10px;
+	padding: 10px;
+}
+#search-total {
+	font-size: 0.6em;
+}
+#search-input {
+	margin-bottom: 20px;
+}
+
+.read-more-wrapper {
+	position: relative;
+	width: 100%;
+	height: 40px;
+	margin: 10px auto;
+}
+.read-more {
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+}
+.title {
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 3px;
+}
+.subtitle {
+	margin-bottom: 3px;
+	font-style: italic;
+}
+.description {
+	margin-bottom: 5px;
+}
+
+#book-container div {
+	margin-bottom: 8px;
+}
+#book-title {
+	font-size: 2em;
+}
+#book-sub-title {
+	font-size: 1.5em;
+	font-style: italic;
+}
+#book-description {
+	line-height: 150%;
+}
+.pagination-container {
+	width: 250px;
+	height: 50px;
+	margin: 20px auto;
+}
+.pager li:hover {
+	cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+	.book-container {
+		width: 47%;
+	}
+}
+@media screen and (max-width: 480px) {
+	.rigth-side {
+		margin-left: 0;
+		margin-top: 10px;
+	}
+}
+
+#spinner, #spinner:after {
+  	/* border-radius: 50%;
+  	border-bottom: 1px solid #789; */
+  	width: 10em;
+  	height: 10em;
+  	/* background-color: #A9A9A9; */
+  	z-index: 10000;
+  	position: absolute;
+  	left: 50%;
+  	bottom: 100px;
+}
